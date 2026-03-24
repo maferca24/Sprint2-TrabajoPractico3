@@ -20,3 +20,5 @@ class IRepository {
 
     }
 }
+export default IRepository
+
