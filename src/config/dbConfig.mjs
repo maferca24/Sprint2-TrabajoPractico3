@@ -1,3 +1,5 @@
+//Archivo de configuración conexión centralizada a MongoDB,permite que la aplicación tenga una única instancia de conexión 
+// que puede ser utlizada en cualquier parte del proyecto
 import mongoose from 'mongoose';
 
 export async function connetDB(){
