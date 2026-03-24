@@ -1,0 +1,26 @@
+//Define el modelo de datos para superheroes utilizando Mongoose,
+//estableciendo la estructura y las reglas de validación para los documentos
+//que seran almacenados en MongoDB.
+
+//Definición del esquema y modelo de Mongoose para superheroes
+//Un modelo representa la colección en MongoDB y permite interactuar con ella
+import mongoose from 'mongoose';
+const superheroSchema = new mongoose.Schema({
+    nombreSuperHeroe: { type: String, required: true },
+    nombreReal: { type: String, required: true },
+    edad: { type: Number, min: 0 },
+    planetaOrigen: { type: String, default: 'Desconocido' },
+    debilidad: String,
+    poderes: [String],
+    aliados: [String],
+    enemigos: [String],
+    create: String,
+    createAt: { type: Date, default: Date.now }    
+});
+
+const SuperHero = mongoose.model('SuperHero', superheroSchema, 'Grupo-04' );
+export default SuperHero
+//Definir el modelo asegura que c/docuemtno de la colección
+//siga una estrucura consistente
+//Moongoose facilita la validación gestión de los datos
+
