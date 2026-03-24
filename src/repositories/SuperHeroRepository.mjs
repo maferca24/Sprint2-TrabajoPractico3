@@ -1,0 +1,22 @@
+//Implementa los metodos definidos en la Interfaz,
+//interactuando directamente con MongoDB a traves de Mongoose
+
+import SuperHero from '../models/SuperHero.ms';
+import Irepository from './IRepository.mjs';
+
+class SuperHeroRepository extends IRepository {
+    async obtenerPorId(id) {
+        return await SuperHero.findById(id);
+    }
+    async obtenerTodos() {
+        return await SuperHero.find({});
+    }
+    async buscarPorAtributo(atributo, valor) {
+        RESOLVER
+    }
+    async obtenerMayoresDe30() {
+        RESOLVER
+    }
+}
+export default new SuperHeroRepository();
+
