@@ -17,7 +17,7 @@ export async function obtenerSuperheroePorIdController(req, res) {
         const superheroeFormateado = renderizarSuperheroe(superheroe);
         res.status(200).json(superheroeFormateado);
     } catch (error) {
-        res.status(500).send({ mensaje, 'Error al obtener el superheroe', error: error.message })
+        res.status(500).send({ mensaje: 'Error al obtener el superheroe', error: error.message })
 
     }
 }
@@ -31,7 +31,7 @@ export async function obtenerTodosLosSuperheroesController(req, res) {
         res.status(200).json(superheroeFormateado);
 
     } catch (error) {
-        res.status(500).send({ mensaje, 'Error al obtener los superheroes', error: error.message })
+        res.status(500).send({ mensaje: 'Error al obtener los superheroes', error: error.message })
 
     }
 }
@@ -49,7 +49,7 @@ export async function buscarSuperheroesPorAtributoController(req, res) {
         res.status(200).json(superheroesFormateados);
     } catch (error) {
         res.status(500).send({
-            mensaje, 'Error al buscar los superheroes',
+            mensaje: 'Error al buscar los superheroes',
             error: error.message
         })
 
@@ -68,7 +68,7 @@ export async function obtenerSuperheroesMayoresDe30Controller(req, res) {
         res.status(200).json(superheroesFormateados);
     } catch (error) {
         res.status(500).send({
-            mensaje, 'Error al obtener superheroes mayores de 30',
+            mensaje: 'Error al obtener superheroes mayores de 30',
             error: error.message
         })
 

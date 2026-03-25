@@ -1,12 +1,12 @@
 import express from 'express';
 import {connectDB} from './config/dbConfig.mjs';
-import superHero from 'routes/superHeroRoutes.mjs'
+import superHeroRoutes from './routes/superHeroesRoutes.mjs';
 
-const app=express();
-const PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT||3000;
 
 //Middeleware para parsear JSON
-app.use (exprres.json());
+app.use (express.json());
 
 //Conexión a MongoDB
 connectDB();
@@ -21,5 +21,5 @@ app.use((req,res)=>{
 
 //Iniciar el servidor
 app.listen(PORT,()=>{
-    console.log('Servidor escuchando en el puerto ${PORT}');
+    console.log(`Servidor escuchando en el puerto ${PORT}`);
 })

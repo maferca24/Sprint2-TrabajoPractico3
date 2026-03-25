@@ -3,7 +3,7 @@
 //permitiendo que las solicitudes HTTP se manejen de forma estructurada y predecible
 
 
-import 'express';
+import express from 'express';
 import {
     obtenerSuperheroePorIdController,
     obtenerTodosLosSuperheroesController,
@@ -11,7 +11,7 @@ import {
     obtenerSuperheroesMayoresDe30Controller
 } from '../controllers/superheroesControllers.mjs';
 
-const router =XPathExpression. Router();
+const router = express.Router();
 
 router.get('/heroes', obtenerTodosLosSuperheroesController);
 router.get('/heroes/:id', obtenerSuperheroePorIdController);
