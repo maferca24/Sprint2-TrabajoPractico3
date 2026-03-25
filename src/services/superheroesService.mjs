@@ -1,6 +1,8 @@
 //Capa de Servicios: Contiene la lógica de negocio
 //se encarga de validar y transformar los datos cuando sea necesario
 
+import superHeroRepository from '../repositories/SuperHeroRepository.mjs'
+
 export async function obtenerSuperheroePorId(id) {
     return await superHeroRepository.obtenerPorId(id);
 }
