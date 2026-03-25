@@ -3,9 +3,10 @@
 
 import {
     obtenerSuperheroePorId, obtenerTodosLosSuperheroes,
-    buscarSuperheroesPorAtributo, obtenerSuperheroesMayoresDe30
-} from "../services/superheroesService.mjs";
-import { renderizarSuperheroe, renderizarListaSuperheroes } from '../views/responseViews.mjs'
+    buscarSuperheroesPorAtributo, obtenerSuperheroesMayoresDe30}
+     from "../services/superheroesService.mjs";
+import { renderizarSuperheroe, renderizarListaSuperheroes }
+ from '../views/responseViews.mjs'
 
 export async function obtenerSuperheroePorIdController(req, res) {
     try {
@@ -14,10 +15,12 @@ export async function obtenerSuperheroePorIdController(req, res) {
         if (!superheroe) {
             return res.status(404).send({ mensaje: 'Superheroe no encontrado' });
         }
+        
         const superheroeFormateado = renderizarSuperheroe(superheroe);
         res.status(200).json(superheroeFormateado);
     } catch (error) {
-        res.status(500).send({ mensaje: 'Error al obtener el superheroe', error: error.message })
+        res.status(500).send({ mensaje: 'Error al obtener el superheroe', 
+            error: error.message });
 
     }
 }
@@ -31,7 +34,8 @@ export async function obtenerTodosLosSuperheroesController(req, res) {
         res.status(200).json(superheroeFormateado);
 
     } catch (error) {
-        res.status(500).send({ mensaje: 'Error al obtener los superheroes', error: error.message })
+        res.status(500).send({ mensaje: 'Error al obtener los superheroes', 
+            error: error.message });
 
     }
 }
@@ -51,7 +55,7 @@ export async function buscarSuperheroesPorAtributoController(req, res) {
         res.status(500).send({
             mensaje: 'Error al buscar los superheroes',
             error: error.message
-        })
+        });
 
     }
 }
@@ -69,8 +73,7 @@ export async function obtenerSuperheroesMayoresDe30Controller(req, res) {
     } catch (error) {
         res.status(500).send({
             mensaje: 'Error al obtener superheroes mayores de 30',
-            error: error.message
-        })
+            error: error.message});
 
     }
 }

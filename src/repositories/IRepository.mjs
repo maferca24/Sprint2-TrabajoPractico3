@@ -20,5 +20,5 @@ class IRepository {
 
     }
 }
-export default IRepository
+export default IRepository;
 

@@ -2,7 +2,7 @@
 //interactuando directamente con MongoDB a traves de Mongoose
 
 import SuperHero from '../models/SuperHero.mjs';
-import IRepository from '../repositories/IRepository.mjs'
+import IRepository from './IRepository.mjs'
 
 class SuperHeroRepository extends IRepository {
     async obtenerPorId(id) {

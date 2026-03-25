@@ -1,13 +1,14 @@
 //Archivo de configuración conexión centralizada a MongoDB,permite que la aplicación tenga una única instancia de conexión 
 // que puede ser utlizada en cualquier parte del proyecto
-import mongoose from 'mongoose';
-
 ////////////
 //Agrego lineas por error en la conexion
 import dns from 'node:dns/promises'; // Nota el prefijo 'node:' recomendado-reemplacé el require que utilizabamos en el practico anterior porque usamos mjs
 // Forzar servidores DNS: Google y Cloudflare
 dns.setServers(["8.8.8.8", "1.1.1.1"]);
 /////////////
+
+import mongoose from 'mongoose';
+
 
 export async function connectDB(){
     try {    
@@ -16,7 +17,7 @@ export async function connectDB(){
         console.log('Conexión exitosa a MongoDB');
         
     } catch (error) {
-        console.error ('Error al conectar a MongoDB:',error);
+        console.error ('Error al conectar a MongoDB:', error);
         process.exit(1);
     }
 }
