@@ -19,7 +19,7 @@ const superheroSchema = new mongoose.Schema({
 });
 
 const SuperHero = mongoose.model('SuperHero', superheroSchema, 'Grupo-04' );
-export default SuperHero
+export default SuperHero;
 //Definir el modelo asegura que c/docuemtno de la colección
 //siga una estrucura consistente
 //Moongoose facilita la validación gestión de los datos
