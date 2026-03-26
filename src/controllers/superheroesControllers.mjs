@@ -29,9 +29,6 @@ export async function obtenerSuperheroePorIdController(req, res) {
             return res.status(404).send({ mensaje: 'Superheroe no encontrado' });
 
         }
-
-
-
         const superheroeFormateado = renderizarSuperheroe(superheroe);
 
         res.status(200).json(superheroeFormateado);
