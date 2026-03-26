@@ -14,15 +14,20 @@ import {
 const router = express.Router();
 
 //Rutas fijas:
+//Todos los superheroes
 //http://localhost:3000/api/heroes
 router.get('/heroes', obtenerTodosLosSuperheroesController);
+//Superheroes mayores a 30 años
 //http://localhost:3000/api/heroes/mayores-30
 router.get('/heroes/mayores-30', obtenerSuperheroesMayoresDe30Controller);
 
 //Rutas con parámetros
+//Superheroes por id
+
 //http://localhost:3000/api/heroes/69c483b9da3820c593b07217
 router.get('/heroes/:id', obtenerSuperheroePorIdController);
-router.get('/heroes/buscar/:atributo/:valor', buscarSuperheroesPorAtributoController);
 
+//http://localhost:3000/api/heroes/buscar/planetaOrigen/Tierra
+router.get('/heroes/buscar/:atributo/:valor', buscarSuperheroesPorAtributoController);
 
 export default router;

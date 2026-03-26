@@ -1,8 +1,9 @@
-//Capa de Vistas: define las funciones de presentaicón de los datos, organizando la infromación
+//Capa de Vistas: define las funciones de presentación de los datos, organizando la información
 //de los supeheroes en un formato estructurado
 
 export function renderizarSuperheroe(superheroe) {
     return {
+        //id: superheroe.id, //agregue esta linea
         Nombre: superheroe.nombreSuperHeroe,
         "Nombre Real": superheroe.nombreReal,
         Edad: superheroe.edad,

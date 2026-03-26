@@ -13,16 +13,18 @@ class SuperHeroRepository extends IRepository {
     }
     
     async buscarPorAtributo(atributo, valor) {
-     //RESOLVER
+     //Para RESOLVER
+     //new RegExp Crea un patrón de búsqueda flexible (comodín).
     const query = { [atributo]: new RegExp(valor, 'i') }; // 'i' para que no importe mayúsculas/minúsculas
     return await SuperHero.find(query);
 }
     async obtenerMayoresDe30() {
-    //RESOLVER
+    //Para RESOLVER
         return await SuperHero.find({
-        edad: { $gt: 30 },
-        planetaOrigen: 'Tierra', // O cualquier otra condición que quieras agregar
-        poder: { $exists: true } 
+        edad: { $gt: 30 }, //Que la edad sea mayor a 30 (no incluye el 30 exacto).
+        planetaOrigen: 'Tierra', // Que su origen sea exactamente "Tierra".
+        //poder: { $exists: true } //: Que el documento tenga un campo llamado poder (que no esté vacío o nulo).
+        'poder.2': { $exists: true }//Que tenga mas de dos poderes
     });
 }
 

@@ -6,6 +6,7 @@
 //Un modelo representa la colección en MongoDB y permite interactuar con ella
 import mongoose from 'mongoose';
 const superheroSchema = new mongoose.Schema({
+    //id:{ type: Number}, //agregue esta linea
     nombreSuperHeroe: { type: String, required: true },
     nombreReal: { type: String, required: true },
     edad: { type: Number, min: 0 },
