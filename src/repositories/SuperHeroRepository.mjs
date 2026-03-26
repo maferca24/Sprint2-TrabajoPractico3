@@ -13,7 +13,7 @@ class SuperHeroRepository extends IRepository {
     }
     
     async buscarPorAtributo(atributo, valor) {
-        //RESOLVER
+     //RESOLVER
     const query = { [atributo]: new RegExp(valor, 'i') }; // 'i' para que no importe mayúsculas/minúsculas
     return await SuperHero.find(query);
 }

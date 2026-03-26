@@ -16,6 +16,7 @@ const router = express.Router();
 //Rutas fijas:
 //http://localhost:3000/api/heroes
 router.get('/heroes', obtenerTodosLosSuperheroesController);
+//http://localhost:3000/api/heroes/mayores-30
 router.get('/heroes/mayores-30', obtenerSuperheroesMayoresDe30Controller);
 
 //Rutas con parámetros

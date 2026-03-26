@@ -79,7 +79,7 @@ export async function buscarSuperheroesPorAtributoController(req, res) {
                 { mensaje: 'No se encontraron superhéroes con ese atributo' });
 
         }
-        const superheroeFormateados = renderizarListaSuperheroes(superheroes);
+        const superheroesFormateados = renderizarListaSuperheroes(superheroes);
 
         res.status(200).json(superheroesFormateados);
 
