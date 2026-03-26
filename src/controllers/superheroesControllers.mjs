@@ -114,7 +114,7 @@ export async function obtenerSuperheroesMayoresDe30Controller(req, res) {
 
 
 
-        const superheroeFormateado = renderizarListaSuperheroes(superheroes);
+        const superheroesFormateados = renderizarListaSuperheroes(superheroes);
 
         res.status(200).json(superheroesFormateados);
 

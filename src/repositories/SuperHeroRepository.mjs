@@ -11,12 +11,22 @@ class SuperHeroRepository extends IRepository {
     async obtenerTodos() {
         return await SuperHero.find({});
     }
+    
     async buscarPorAtributo(atributo, valor) {
-        RESOLVER
-    }
+        //RESOLVER
+    const query = { [atributo]: new RegExp(valor, 'i') }; // 'i' para que no importe mayúsculas/minúsculas
+    return await SuperHero.find(query);
+}
     async obtenerMayoresDe30() {
-        RESOLVER
-    }
+    //RESOLVER
+        return await SuperHero.find({
+        edad: { $gt: 30 },
+        planetaOrigen: 'Tierra', // O cualquier otra condición que quieras agregar
+        poder: { $exists: true } 
+    });
+}
+
+
 }
 export default new SuperHeroRepository();
 
