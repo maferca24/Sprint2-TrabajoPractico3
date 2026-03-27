@@ -24,7 +24,7 @@ router.get('/heroes/mayores-30', obtenerSuperheroesMayoresDe30Controller);
 //Rutas con parámetros
 //Superheroes por id
 
-//http://localhost:3000/api/heroes/69c483b9da3820c593b07217
+//http://localhost:3000/api/heroes/69c6fd59d90e243b1c0fad1b
 router.get('/heroes/:id', obtenerSuperheroePorIdController);
 
 //http://localhost:3000/api/heroes/buscar/planetaOrigen/Tierra
