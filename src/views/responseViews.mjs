@@ -3,7 +3,6 @@
 
 export function renderizarSuperheroe(superheroe) {
     return {
-        //id: superheroe.id, //agregue esta linea
         Nombre: superheroe.nombreSuperHeroe,
         "Nombre Real": superheroe.nombreReal,
         Edad: superheroe.edad,

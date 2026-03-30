@@ -18,20 +18,20 @@ class SuperHeroRepository extends IRepository {
         const query = { [atributo]: new RegExp(valor, 'i') }; // 'i' para que no importe mayúsculas/minúsculas
         return await SuperHero.find(query);
     }
-    //Superheroes mayores a 30 años
-     async obtenerMayoresDe30() {
-         return await SuperHero.find({
-             edad: { $gt: 30 } //Que la edad sea mayor a 30 (no incluye el 30 exacto).        
-         });
-     }
+    // Superheroes mayores a 30 años
+    //   async obtenerMayoresDe30() {
+    //       return await SuperHero.find({
+    //           edad: { $gt: 30 } //Que la edad sea mayor a 30 (no incluye el 30 exacto).        
+    //       });
+    //   }
     //Superheroes mayores a 30 años del Planeta Tierra y con mas de dos poderes
-    // async obtenerMayoresDe30() {
-    // return await SuperHero.find({
-    //     edad: { $gt: 30 },
-    //     planetaOrigen: 'Tierra',
-    //     'poderes.2': { $exists: true } 
-    // });
+    async obtenerMayoresDe30() {
+    return await SuperHero.find({
+        edad: { $gt: 30 },
+        planetaOrigen: 'Tierra',
+         'poderes.2': { $exists: true } 
+     });
+    }
 }
-
 export default new SuperHeroRepository();
 
