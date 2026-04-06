@@ -1,3 +1,4 @@
+//Modelo de datos-Modelo SuperHero
 //Define el modelo de datos para superheroes utilizando Mongoose,
 //estableciendo la estructura y las reglas de validación para los documentos
 //que seran almacenados en MongoDB.

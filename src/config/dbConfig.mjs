@@ -1,5 +1,7 @@
+//Configuración de la base de datos-Conexión a MongoDB
+
 //Archivo de configuración conexión centralizada a MongoDB,permite que la aplicación tenga una única instancia de conexión 
-// que puede ser utlizada en cualquier parte del proyecto
+// que puede ser utilizada en cualquier parte del proyecto
 ////////////
 //Agrego lineas por error en la conexion
 import dns from 'node:dns/promises'; // Nota el prefijo 'node:' recomendado-reemplacé el require que utilizabamos en el practico anterior porque usamos mjs
